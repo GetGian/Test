@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDF7F7"
+    android:padding="24dp"
+    tools:ignore="HardcodedText">
+
+    <ImageButton
+        android:id="@+id/btn_close"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@null"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#212121" />
+
+    <ImageView
+        android:id="@+id/img_meal"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@null"
+        android:src="@drawable/burger"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_close" />
+
+    <TextView
+        android:id="@+id/tv_rate_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="How was your meal?"
+        android:textColor="#212121"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_meal" />
+
+    <TextView
+        android:id="@+id/tv_rate_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="Your feedback helps us improve our service and the quality of food."
+        android:textColor="#757575"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_rate_title" />
+
+    <LinearLayout
+        android:id="@+id/stars_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_rate_desc">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="4dp"
+            android:src="@android:drawable/btn_star_big_on"
+            app:tint="#E53935"
+            android:contentDescription="@null" />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="4dp"
+            android:src="@android:drawable/btn_star_big_on"
+            app:tint="#E53935"
+            android:contentDescription="@null" />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="4dp"
+            android:src="@android:drawable/btn_star_big_on"
+            app:tint="#E53935"
+            android:contentDescription="@null" />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="4dp"
+            android:src="@android:drawable/btn_star_big_on"
+            app:tint="#E53935"
+            android:contentDescription="@null" />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="4dp"
+            android:src="@android:drawable/btn_star_big_off"
+            app:tint="#D1D1D1"
+            android:contentDescription="@null" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_review"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rounded_card"
+        android:gravity="top"
+        android:hint="Write your experience here&#8230;"
+        android:padding="16dp"
+        android:textSize="16sp"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        app:layout_constraintTop_toBottomOf="@id/stars_container" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#E53935"
+        android:text="Submit Review"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:cornerRadius="30dp"
+        app:layout_constraintTop_toBottomOf="@id/et_review" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
